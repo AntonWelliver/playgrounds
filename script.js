@@ -17,8 +17,20 @@ function random_bg_color() {
     var y = Math.floor(Math.random() * 256);
     var z = Math.floor(Math.random() * 256);
     var bgColor = "rgb(" + x + "," + y + "," + z + ")";
- console.log(bgColor);
-  
-    document.body.style.background = bgColor;
-    }
     
+    document.body.style.background = bgColor;
+} 
+
+/*     setInterval(random_bg_color, 1000); */
+
+function randomBackgroundColor() {
+    var red1 = Math.floor(Math.random() * 9);
+    var red2 = Math.floor(Math.random() * 9);
+    var green1 = Math.floor(Math.random() * 9);
+    var green2 = Math.floor(Math.random() * 9);
+    var blue1 = Math.floor(Math.random() * 9);
+    var blue2 = Math.floor(Math.random() * 9);
+    var bgColor = "#" + red1 + red2 + green1 + green2 + blue1 + blue2;
+    
+    document.body.style.background = bgColor;
+}

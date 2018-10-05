@@ -2,26 +2,25 @@
 
 function changeBackground() {
     
-    var style = document.body.style;
+    /* var style = document.body.style; */
 
-    if (document.body.style.backgroundvalue == "red") {
-        document.body.style.backgroundvalue = "white";
+    if (document.body.style.background == "red") {
+        document.body.style.background = "white";
     } else {
-        document.body.style.backgroundvalue = "red";
+        document.body.style.background = "red";
     }
 
 }
 
-function random_bg_value() {
-    var x = Math.floor(Math.random() * 256);
-    var y = Math.floor(Math.random() * 256);
-    var z = Math.floor(Math.random() * 256);
-    var bgvalue = "rgb(" + x + "," + y + "," + z + ")";
+function random_bg_color() {
+    var red = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+    var bgvalue = "rgb(" + red + "," + green + "," + blue + ")";
     
     document.body.style.background = bgvalue;
-} 
-
-/*     setInterval(random_bg_value, 1000); */
+}
+/*     setInterval(random_bg_color, 1000); */
 
 function randomBackgroundColor() {
     var red1 = convertToHex(Math.round(Math.random() * 15));
@@ -34,7 +33,6 @@ function randomBackgroundColor() {
 
     var bgvalue = "#" + red1 + red2 + green1 + green2 + blue1 + blue2;
     document.body.style.background = bgvalue;
-    console.log(bgvalue);
 }
 
 function convertToHex(value) {
